@@ -1,0 +1,123 @@
+import * as React from 'react';
+import Rating from '@mui/material/Rating';
+import Box from '@mui/material/Box';
+import StarIcon from '@mui/icons-material/Star';
+import Button from '@mui/material/Button';
+
+const labels = {
+  0.5: 'Useless',
+  1: 'Useless+',
+  1.5: 'Poor',
+  2: 'Poor+',
+  2.5: 'Ok',
+  3: 'Ok+',
+  3.5: 'Good',
+  4: 'Good+',
+  4.5: 'Excellent',
+  5: 'Excellent+',
+};
+
+export default function StaticHoverRating() {
+  return (
+    <div>
+      {/* Row 1: UDAY KIRAN */}
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          marginTop: '20px',
+          padding: '0 20px',
+        }}
+      >
+        <Box sx={{ width: '20%' }}>
+          <h3 style={{ margin: 0 }}>UDAY KIRAN</h3>
+        </Box>
+
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '40%', gap: '10px' }}>
+          <Rating
+            name="read-only"
+            value={2.5}
+            precision={0.5}
+            readOnly
+            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+          />
+          <Box sx={{ ml: 2 }}>{labels[2.5]}</Box>
+        </Box>
+
+        <Box sx={{ width: '15%', textAlign: 'right' }}>
+          <Button variant="contained" disableElevation>
+            onClick
+          </Button>
+        </Box>
+      </Box>
+
+      {/* Row 2: VIKAS */}
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          marginTop: '20px',
+          padding: '0 20px',
+        }}
+      >
+        <Box sx={{ width: '20%' }}>
+          <h3 style={{ margin: 0 }}>VIKAS</h3>
+        </Box>
+
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '40%', gap: '10px' }}>
+          <Rating
+            name="read-only"
+            value={2.0}
+            precision={0.5}
+            readOnly
+            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+          />
+          <Box sx={{ ml: 2 }}>{labels[2.0]}</Box>
+        </Box>
+
+        <Box sx={{ width: '15%', textAlign: 'right' }}>
+          <Button variant="contained" disableElevation>
+            onClick
+          </Button>
+        </Box>
+      </Box>
+
+      {/* Row 3: CHARAN */}
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          marginTop: '20px',
+          padding: '0 20px',
+        }}
+      >
+        <Box sx={{ width: '20%' }}>
+          <h3 style={{ margin: 0 }}>CHARAN</h3>
+        </Box>
+
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '40%', gap: '10px' }}>
+          <Rating
+            name="read-only"
+            value={1.5}
+            precision={0.5}
+            readOnly
+            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+          />
+          <Box sx={{ ml: 2 }}>{labels[1.5]}</Box>
+        </Box>
+
+        <Box sx={{ width: '15%', textAlign: 'right' }}>
+          <Button variant="contained" disableElevation>
+            onClick
+          </Button>
+        </Box>
+      </Box>
+    </div>
+  );
+}
